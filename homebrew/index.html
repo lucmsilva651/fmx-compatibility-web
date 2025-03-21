@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/misc/index.css">
+  <title>FreeMyXe Compatibility Database</title>
+  <script type="module">
+    import ZeroMd, { STYLES } from 'https://cdn.jsdelivr.net/npm/zero-md@3'
+
+    customElements.define('zero-md', class extends ZeroMd {
+      async load() {
+        await super.load()
+        this.template = STYLES.preset('light')
+      }
+    })
+  </script>
+</head>
+<body>
+  <header>
+    <div>
+      <object data="https://upload.wikimedia.org/wikipedia/en/0/0c/Xbox_360_full_logo.svg" type="image/svg+xml"></object>
+      <p>FMX Compatibility</p>
+    </div>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/xbla">XBLA</a></li>
+      <li><a href="/retail">Retail</a></li>
+      <li><a href="/homebrew/">Homebrew</a></li>
+    </ul>
+    <a href="https://github.com/XDanfr/FMX-Compatibility/issues">GitHub Repo</a>
+  </header>
+  <zero-md src="https://raw.githubusercontent.com/XDanfr/FMX-Compatibility/refs/heads/main/Homebrew.md">
+    <style>
+      :host { display: block; position: relative; contain: content; }
+      :host([hidden]) { display: none; }
+    </style>
+  </zero-md>
+</body>
+</html>
