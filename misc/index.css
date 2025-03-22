@@ -67,8 +67,27 @@ zero-md {
   padding: 1.5em 10em;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1150px) {
+  header, header div {
+    gap: 1.5em;
+    flex-direction: column;
+  }
+
+  header > a {
+    margin-left: initial;
+  }
+
+  header div object {
+    display: none;
+  }
+
+  header div p {
+    color: #84b734;
+    font-weight: 500;
+    font-size: initial;
+  }
+
   zero-md {
-    padding: 2rem 3rem;
+    padding: 1.3rem 3rem;
   }
 }
